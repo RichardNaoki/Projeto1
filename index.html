@@ -7,7 +7,8 @@
     <link href="./output.css" rel="stylesheet">
     <title>Projeto1</title>
   </head>
-  <body class="bg-cover" style="background-image: url(img/imagem.png)">
+  <body>
+    <!-- class="bg-cover" style="background-image: url(img/imagem.png)"> -->
 
       
       
@@ -294,12 +295,12 @@
 
 
  -->
+<!-- 
 
-
-<nav class="bg-blue-500 p-4 text-white">
+ <nav class="bg-blue-500 p-4 text-white">
   <ul class="flex space-x-4">
     <li><a href="#" data-content="home" class="nav-item">Home</a></li>
-    <li><a href="#" data-content="About" class="nav-item">Sobre</a></li>
+    <li><a href="#" data-content="about" class="nav-item">Sobre</a></li>
     <li><a href="#" data-content="services" class="nav-item">Serviços</a></li>
     <li><a href="#" data-content="contact" class="nav-item">Contato</a></li>
   </ul>
@@ -307,26 +308,36 @@
 
 <div id="content" class="p-6">
   <h1 class="text-2xl font-bold">Bem Vindo!</h1>
-  <p>Clique em um item pdo menu para ver mais informações.</p>
+  <p>Clique em um item do menu para ver mais informações.</p>
 </div>
 
 <script>
-  function loadContent(content){
+  function loadContent(content) {
     const contentDiv = document.getElementById('content');
 
     const contentMap = {
-      home: '<h1 class="text-2xl font-bold">Home</h1><p>Este é o conteúdo da pagina Home.</p>',
-      about: '<h1 class="text-2xl font-bold">Sobre</h1><p>Este é o conteúdo da pagina Home.</p>',
-      services: '<h1 class="text-2xl font-bold">Serviços</h1><p>Este é o conteúdo da pagina Home.</p>',
-      contact: '<h1 class="text-2xl font-bold">Contato</h1><p>Este é o conteúdo da pagina Home.</p>',
-    }
+      home: '<h1 class="text-2xl font-bold">Home</h1><p>Este é o conteúdo da página Home.</p>',
+      about: '<h1 class="text-2xl font-bold">Sobre</h1><p>Este é o conteúdo da página Sobre.</p>',
+      services: '<h1 class="text-2xl font-bold">Serviços</h1><p>Este é o conteúdo da página Serviços.</p>',
+      contact: '<h1 class="text-2xl font-bold">Contato</h1><p>Este é o conteúdo da página Contato.</p>',
+    };
+
+    contentDiv.innerHTML = contentMap[content] || '<h1 class="text-2xl font-bold">Bem Vindo!</h1><p>Clique em um item do menu para ver mais informações.</p>';
   }
+
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', event => {
+      event.preventDefault();
+      const content = item.getAttribute('data-content');
+      loadContent(content);
+    });
+  });
 </script>
 
 
 
 
-
+ -->
 
 
 
