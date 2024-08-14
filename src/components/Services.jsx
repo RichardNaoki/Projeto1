@@ -1,7 +1,12 @@
 import React from "react";
 
 const Services = () => {
-  return <h1>Services</h1>;
+  return (
+    <div>
+      <h1>Services Page</h1>
+      <p>Details about our services.</p>
+    </div>
+  );
 };
 
 export default Services;
